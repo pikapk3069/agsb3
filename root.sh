@@ -200,6 +200,10 @@ echo -e "\033[1;33m正在更新系统并安装必要软件包，请稍候...\033
 #apt -y update && apt -y upgrade && apt install -y curl wget git vim nano htop tmux python3 python3-pip nodejs npm build-essential net-tools zip unzip sudo locales tree ca-certificates gnupg lsb-release iproute2 cron podman
 apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y curl wget git vim nano htop tmux zsh expect python3 python3-pip nodejs npm net-tools zip unzip sudo locales tree ca-certificates gnupg lsb-release iproute2 cron
 
+ln -s /usr/bin/python3 /usr/bin/python
+
+export HOME="/home/$HOST_USER"
+
 echo -e "\033[1;32m系统更新和软件安装完成!\033[0m"
 
 # 显示欢迎信息
